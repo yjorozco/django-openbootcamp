@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h3>
+	obtener todos los elementos que contengan la palabra yes
+</h3>
+<ul>
+	{% for contain in contains %}
+		<li>{{ contain.name }}</li>
+	{% endfor %}
+<h3>
+	Bucando elementos cuyo id sea mayor o igual a 15
+</h3>
+<ul>
+	{% for filtered2 in filtereds2 %}
+		<li>{{ filtered2.email }}</li>
+	{% endfor %}
+</ul>
+	
+<h3>
+	Elementos ordenados por id
+</h3>
+<ul>
+	{% for order in orders %}
+		<li>{{ order.email }}</li>
+	{% endfor %}
+</ul>
+<h3>Ob
+<h3>Obteniendo los 10 elemento saltando 5</h3>
+<ul>
+	{% for offset in offsets %}
+		<li>{{ offset.email }}</li>
+	{% endfor %}
+</ul>
+<h3>Obteniendo los 10 primeros</h3>
+<ul>
+	{% for limit in limits %}
+		<li>{{ limit.email }}</li>
+	{% endfor %}
+</ul>
+<h3>Obteniendo un unico elemento</h3>
+<p>{{author.email}}</p>
+
+<h3>Buscando Author donde Email = christinavang@example.net</h3>
+<ul>
+	{% for elm in filtered %}
+	 <li> {{ elm.name }} | {{ elm.email }} </li>
+	{% endfor %}
+</ul>
+
+<h3>Todos los autores</h3>
+<ul>
+	{%for author in authors%}
+		<li>{{ author.name }} ({{ author.email}})</li>
+	{% endfor %}
+</ul>
+<h3>Total de Authores: {{ authors|length}}</h3>
+</body>
+</html>

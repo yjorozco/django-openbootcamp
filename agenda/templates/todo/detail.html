@@ -1,0 +1,21 @@
+
+{% extends 'layout/base.html' %}
+
+{% block 'title' %} Contacto {{ todo.title }} {% endblock %}
+
+{% block 'content' %}
+
+<form class="search" action="{% url 'todo' %}" method="get">
+	<input type="text" name="search" class="search-bar" placeholder="Buscar todo...">
+	<input type="submit" class="btn btn-search" value="Buscar">	
+</form>
+<span class="aux-btns"><a href="{% url 'todo' %}">Volver atras</a></span>
+<ul class='list'>
+		<li><b>Titulo: </b> {{ todo.title }} </li>
+		<li><b>Descripcion: </b> {{ todo.description }} </li>
+		<li><b>Fecha de Creacion: </b> {{ todo.date }} </li>
+		<li><b>Fecha de Finalizacion estimada: </b> {{ todo.estimated_end }} </li>
+		<li><b>Prioridad: </b>  {{ todo.priority }} </li>
+</ul>
+
+{% endblock %}
